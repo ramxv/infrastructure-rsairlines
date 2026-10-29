@@ -1,12 +1,12 @@
 resource "azurerm_linux_web_app" "backend_tf" {
   name                = var.backend_name
-  resource_group_name = azurerm_resource_group.rg_rsairlines_tf.name
-  service_plan_id     = azurerm_service_plan.as_rsairlines_tf.id
-  location            = azurerm_service_plan.as_rsairlines_tf.location
+  resource_group_name = azurerm_resource_group.rg_team07_tf.name
+  service_plan_id     = azurerm_service_plan.as_team07_tf.id
+  location            = azurerm_service_plan.as_team07_tf.location
 
   site_config {
     application_stack {
-      python_version = "3.12"
+      dotnet_version = "10.0"
     }
 
     cors {
